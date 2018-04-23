@@ -1,0 +1,571 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="PropetyAppModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="PropetyAppEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Activities" EntityType="PropetyAppModel.Activity" />
+    <EntitySet Name="Activity_Property" EntityType="PropetyAppModel.Activity_Property" />
+    <EntitySet Name="Advert_Type" EntityType="PropetyAppModel.Advert_Type" />
+    <EntitySet Name="Cities" EntityType="PropetyAppModel.City" />
+    <EntitySet Name="Constructor_Project" EntityType="PropetyAppModel.Constructor_Project" />
+    <EntitySet Name="Countries" EntityType="PropetyAppModel.Country" />
+    <EntitySet Name="Document_Type" EntityType="PropetyAppModel.Document_Type" />
+    <EntitySet Name="Floor_Count" EntityType="PropetyAppModel.Floor_Count" />
+    <EntitySet Name="Images" EntityType="PropetyAppModel.Image" />
+    <EntitySet Name="Indicators" EntityType="PropetyAppModel.Indicator" />
+    <EntitySet Name="Indicators_Property" EntityType="PropetyAppModel.Indicators_Property" />
+    <EntitySet Name="Metroes" EntityType="PropetyAppModel.Metro" />
+    <EntitySet Name="Owner_Type" EntityType="PropetyAppModel.Owner_Type" />
+    <EntitySet Name="Propert_Type" EntityType="PropetyAppModel.Propert_Type" />
+    <EntitySet Name="Properties" EntityType="PropetyAppModel.Property" />
+    <EntitySet Name="Regions" EntityType="PropetyAppModel.Region" />
+    <EntitySet Name="Repair_Type" EntityType="PropetyAppModel.Repair_Type" />
+    <EntitySet Name="Room_Count" EntityType="PropetyAppModel.Room_Count" />
+    <EntitySet Name="Sell_Type" EntityType="PropetyAppModel.Sell_Type" />
+    <EntitySet Name="Settlements" EntityType="PropetyAppModel.Settlement" />
+    <EntitySet Name="Status" EntityType="PropetyAppModel.Status" />
+    <EntitySet Name="sysdiagrams" EntityType="PropetyAppModel.sysdiagram" />
+    <AssociationSet Name="FK_Activity_Property_Activity" Association="PropetyAppModel.FK_Activity_Property_Activity">
+      <End Role="Activity" EntitySet="Activities" />
+      <End Role="Activity_Property" EntitySet="Activity_Property" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Activity_Property_Property" Association="PropetyAppModel.FK_Activity_Property_Property">
+      <End Role="Property" EntitySet="Properties" />
+      <End Role="Activity_Property" EntitySet="Activity_Property" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Property_Advert_Type" Association="PropetyAppModel.FK_Property_Advert_Type">
+      <End Role="Advert_Type" EntitySet="Advert_Type" />
+      <End Role="Property" EntitySet="Properties" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Property_Cities" Association="PropetyAppModel.FK_Property_Cities">
+      <End Role="City" EntitySet="Cities" />
+      <End Role="Property" EntitySet="Properties" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Property_Constructor_Project" Association="PropetyAppModel.FK_Property_Constructor_Project">
+      <End Role="Constructor_Project" EntitySet="Constructor_Project" />
+      <End Role="Property" EntitySet="Properties" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Property_Country" Association="PropetyAppModel.FK_Property_Country">
+      <End Role="Country" EntitySet="Countries" />
+      <End Role="Property" EntitySet="Properties" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Property_Document_Type" Association="PropetyAppModel.FK_Property_Document_Type">
+      <End Role="Document_Type" EntitySet="Document_Type" />
+      <End Role="Property" EntitySet="Properties" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Property_Floor_Count" Association="PropetyAppModel.FK_Property_Floor_Count">
+      <End Role="Floor_Count" EntitySet="Floor_Count" />
+      <End Role="Property" EntitySet="Properties" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Image_Property" Association="PropetyAppModel.FK_Image_Property">
+      <End Role="Property" EntitySet="Properties" />
+      <End Role="Image" EntitySet="Images" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Indicators_Property_Indicators" Association="PropetyAppModel.FK_Indicators_Property_Indicators">
+      <End Role="Indicator" EntitySet="Indicators" />
+      <End Role="Indicators_Property" EntitySet="Indicators_Property" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Indicators_Property_Property" Association="PropetyAppModel.FK_Indicators_Property_Property">
+      <End Role="Property" EntitySet="Properties" />
+      <End Role="Indicators_Property" EntitySet="Indicators_Property" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Property_Metro" Association="PropetyAppModel.FK_Property_Metro">
+      <End Role="Metro" EntitySet="Metroes" />
+      <End Role="Property" EntitySet="Properties" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Property_Owner_Type" Association="PropetyAppModel.FK_Property_Owner_Type">
+      <End Role="Owner_Type" EntitySet="Owner_Type" />
+      <End Role="Property" EntitySet="Properties" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Property_Propert_Type" Association="PropetyAppModel.FK_Property_Propert_Type">
+      <End Role="Propert_Type" EntitySet="Propert_Type" />
+      <End Role="Property" EntitySet="Properties" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Property_Regions" Association="PropetyAppModel.FK_Property_Regions">
+      <End Role="Region" EntitySet="Regions" />
+      <End Role="Property" EntitySet="Properties" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Property_RepairType" Association="PropetyAppModel.FK_Property_RepairType">
+      <End Role="Repair_Type" EntitySet="Repair_Type" />
+      <End Role="Property" EntitySet="Properties" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Property_Room_Count" Association="PropetyAppModel.FK_Property_Room_Count">
+      <End Role="Room_Count" EntitySet="Room_Count" />
+      <End Role="Property" EntitySet="Properties" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Property_Sell_Type" Association="PropetyAppModel.FK_Property_Sell_Type">
+      <End Role="Sell_Type" EntitySet="Sell_Type" />
+      <End Role="Property" EntitySet="Properties" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Property_Settlement" Association="PropetyAppModel.FK_Property_Settlement">
+      <End Role="Settlement" EntitySet="Settlements" />
+      <End Role="Property" EntitySet="Properties" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Property_Status" Association="PropetyAppModel.FK_Property_Status">
+      <End Role="Status" EntitySet="Status" />
+      <End Role="Property" EntitySet="Properties" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Activity">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Activity_Property" Relationship="PropetyAppModel.FK_Activity_Property_Activity" FromRole="Activity" ToRole="Activity_Property" />
+  </EntityType>
+  <EntityType Name="Activity_Property">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PropertyId" Type="Int32" />
+    <Property Name="ActionId" Type="Int32" />
+    <NavigationProperty Name="Activity" Relationship="PropetyAppModel.FK_Activity_Property_Activity" FromRole="Activity_Property" ToRole="Activity" />
+    <NavigationProperty Name="Property" Relationship="PropetyAppModel.FK_Activity_Property_Property" FromRole="Activity_Property" ToRole="Property" />
+  </EntityType>
+  <EntityType Name="Advert_Type">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Properties" Relationship="PropetyAppModel.FK_Property_Advert_Type" FromRole="Advert_Type" ToRole="Property" />
+  </EntityType>
+  <EntityType Name="City">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CityName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Properties" Relationship="PropetyAppModel.FK_Property_Cities" FromRole="City" ToRole="Property" />
+  </EntityType>
+  <EntityType Name="Constructor_Project">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ProjectName" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Properties" Relationship="PropetyAppModel.FK_Property_Constructor_Project" FromRole="Constructor_Project" ToRole="Property" />
+  </EntityType>
+  <EntityType Name="Country">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Properties" Relationship="PropetyAppModel.FK_Property_Country" FromRole="Country" ToRole="Property" />
+  </EntityType>
+  <EntityType Name="Document_Type">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Properties" Relationship="PropetyAppModel.FK_Property_Document_Type" FromRole="Document_Type" ToRole="Property" />
+  </EntityType>
+  <EntityType Name="Floor_Count">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FloorCount" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Properties" Relationship="PropetyAppModel.FK_Property_Floor_Count" FromRole="Floor_Count" ToRole="Property" />
+  </EntityType>
+  <EntityType Name="Image">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PropertyId" Type="Int32" />
+    <Property Name="Path" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Property" Relationship="PropetyAppModel.FK_Image_Property" FromRole="Image" ToRole="Property" />
+  </EntityType>
+  <EntityType Name="Indicator">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Indicators_Property" Relationship="PropetyAppModel.FK_Indicators_Property_Indicators" FromRole="Indicator" ToRole="Indicators_Property" />
+  </EntityType>
+  <EntityType Name="Indicators_Property">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IndicatorId" Type="Int32" />
+    <Property Name="PropertyId" Type="Int32" />
+    <NavigationProperty Name="Indicator" Relationship="PropetyAppModel.FK_Indicators_Property_Indicators" FromRole="Indicators_Property" ToRole="Indicator" />
+    <NavigationProperty Name="Property" Relationship="PropetyAppModel.FK_Indicators_Property_Property" FromRole="Indicators_Property" ToRole="Property" />
+  </EntityType>
+  <EntityType Name="Metro">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MetroName" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Properties" Relationship="PropetyAppModel.FK_Property_Metro" FromRole="Metro" ToRole="Property" />
+  </EntityType>
+  <EntityType Name="Owner_Type">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TypeName" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Properties" Relationship="PropetyAppModel.FK_Property_Owner_Type" FromRole="Owner_Type" ToRole="Property" />
+  </EntityType>
+  <EntityType Name="Propert_Type">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Properties" Relationship="PropetyAppModel.FK_Property_Propert_Type" FromRole="Propert_Type" ToRole="Property" />
+  </EntityType>
+  <EntityType Name="Property">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="StatusId" Type="Int32" />
+    <Property Name="AdvertTypeId" Type="Int32" />
+    <Property Name="PropertyTypeId" Type="Int32" />
+    <Property Name="CountryId" Type="Int32" />
+    <Property Name="CityId" Type="Int32" />
+    <Property Name="RegionId" Type="Int32" />
+    <Property Name="SettlementId" Type="Int32" />
+    <Property Name="DocumentTypeId" Type="Int32" />
+    <Property Name="RepairTypeId" Type="Int32" />
+    <Property Name="SellTypeId" Type="Int32" />
+    <Property Name="MetroId" Type="Int32" />
+    <Property Name="OwnerTypeId" Type="Int32" />
+    <Property Name="FloorCountId" Type="Int32" />
+    <Property Name="ConstProjectId" Type="Int32" />
+    <Property Name="RoomCountId" Type="Int32" />
+    <Property Name="Adress" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Price" Type="Int32" />
+    <Property Name="About" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="OwnerName" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="OwnerNumber" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="OwnerEmail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="OwnerAbout" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Area" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="Floor" Type="Int32" />
+    <Property Name="LandArea" Type="Decimal" Precision="18" Scale="0" />
+    <NavigationProperty Name="Activity_Property" Relationship="PropetyAppModel.FK_Activity_Property_Property" FromRole="Property" ToRole="Activity_Property" />
+    <NavigationProperty Name="Advert_Type" Relationship="PropetyAppModel.FK_Property_Advert_Type" FromRole="Property" ToRole="Advert_Type" />
+    <NavigationProperty Name="City" Relationship="PropetyAppModel.FK_Property_Cities" FromRole="Property" ToRole="City" />
+    <NavigationProperty Name="Constructor_Project" Relationship="PropetyAppModel.FK_Property_Constructor_Project" FromRole="Property" ToRole="Constructor_Project" />
+    <NavigationProperty Name="Country" Relationship="PropetyAppModel.FK_Property_Country" FromRole="Property" ToRole="Country" />
+    <NavigationProperty Name="Document_Type" Relationship="PropetyAppModel.FK_Property_Document_Type" FromRole="Property" ToRole="Document_Type" />
+    <NavigationProperty Name="Floor_Count" Relationship="PropetyAppModel.FK_Property_Floor_Count" FromRole="Property" ToRole="Floor_Count" />
+    <NavigationProperty Name="Images" Relationship="PropetyAppModel.FK_Image_Property" FromRole="Property" ToRole="Image" />
+    <NavigationProperty Name="Indicators_Property" Relationship="PropetyAppModel.FK_Indicators_Property_Property" FromRole="Property" ToRole="Indicators_Property" />
+    <NavigationProperty Name="Metro" Relationship="PropetyAppModel.FK_Property_Metro" FromRole="Property" ToRole="Metro" />
+    <NavigationProperty Name="Owner_Type" Relationship="PropetyAppModel.FK_Property_Owner_Type" FromRole="Property" ToRole="Owner_Type" />
+    <NavigationProperty Name="Propert_Type" Relationship="PropetyAppModel.FK_Property_Propert_Type" FromRole="Property" ToRole="Propert_Type" />
+    <NavigationProperty Name="Region" Relationship="PropetyAppModel.FK_Property_Regions" FromRole="Property" ToRole="Region" />
+    <NavigationProperty Name="Repair_Type" Relationship="PropetyAppModel.FK_Property_RepairType" FromRole="Property" ToRole="Repair_Type" />
+    <NavigationProperty Name="Room_Count" Relationship="PropetyAppModel.FK_Property_Room_Count" FromRole="Property" ToRole="Room_Count" />
+    <NavigationProperty Name="Sell_Type" Relationship="PropetyAppModel.FK_Property_Sell_Type" FromRole="Property" ToRole="Sell_Type" />
+    <NavigationProperty Name="Settlement" Relationship="PropetyAppModel.FK_Property_Settlement" FromRole="Property" ToRole="Settlement" />
+    <NavigationProperty Name="Status" Relationship="PropetyAppModel.FK_Property_Status" FromRole="Property" ToRole="Status" />
+  </EntityType>
+  <EntityType Name="Region">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RegionName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Properties" Relationship="PropetyAppModel.FK_Property_Regions" FromRole="Region" ToRole="Property" />
+  </EntityType>
+  <EntityType Name="Repair_Type">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Properties" Relationship="PropetyAppModel.FK_Property_RepairType" FromRole="Repair_Type" ToRole="Property" />
+  </EntityType>
+  <EntityType Name="Room_Count">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RoomCount" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Properties" Relationship="PropetyAppModel.FK_Property_Room_Count" FromRole="Room_Count" ToRole="Property" />
+  </EntityType>
+  <EntityType Name="Sell_Type">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Properties" Relationship="PropetyAppModel.FK_Property_Sell_Type" FromRole="Sell_Type" ToRole="Property" />
+  </EntityType>
+  <EntityType Name="Settlement">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Properties" Relationship="PropetyAppModel.FK_Property_Settlement" FromRole="Settlement" ToRole="Property" />
+  </EntityType>
+  <EntityType Name="Status">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="StatusName" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Properties" Relationship="PropetyAppModel.FK_Property_Status" FromRole="Status" ToRole="Property" />
+  </EntityType>
+  <EntityType Name="sysdiagram">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <Association Name="FK_Activity_Property_Activity">
+    <End Type="PropetyAppModel.Activity" Role="Activity" Multiplicity="0..1" />
+    <End Type="PropetyAppModel.Activity_Property" Role="Activity_Property" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Activity">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Activity_Property">
+        <PropertyRef Name="ActionId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Activity_Property_Property">
+    <End Type="PropetyAppModel.Property" Role="Property" Multiplicity="0..1" />
+    <End Type="PropetyAppModel.Activity_Property" Role="Activity_Property" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Property">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Activity_Property">
+        <PropertyRef Name="PropertyId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Property_Advert_Type">
+    <End Type="PropetyAppModel.Advert_Type" Role="Advert_Type" Multiplicity="0..1" />
+    <End Type="PropetyAppModel.Property" Role="Property" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Advert_Type">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Property">
+        <PropertyRef Name="AdvertTypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Property_Cities">
+    <End Type="PropetyAppModel.City" Role="City" Multiplicity="0..1" />
+    <End Type="PropetyAppModel.Property" Role="Property" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="City">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Property">
+        <PropertyRef Name="CityId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Property_Constructor_Project">
+    <End Type="PropetyAppModel.Constructor_Project" Role="Constructor_Project" Multiplicity="0..1" />
+    <End Type="PropetyAppModel.Property" Role="Property" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Constructor_Project">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Property">
+        <PropertyRef Name="ConstProjectId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Property_Country">
+    <End Type="PropetyAppModel.Country" Role="Country" Multiplicity="0..1" />
+    <End Type="PropetyAppModel.Property" Role="Property" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Country">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Property">
+        <PropertyRef Name="CountryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Property_Document_Type">
+    <End Type="PropetyAppModel.Document_Type" Role="Document_Type" Multiplicity="0..1" />
+    <End Type="PropetyAppModel.Property" Role="Property" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Document_Type">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Property">
+        <PropertyRef Name="DocumentTypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Property_Floor_Count">
+    <End Type="PropetyAppModel.Floor_Count" Role="Floor_Count" Multiplicity="0..1" />
+    <End Type="PropetyAppModel.Property" Role="Property" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Floor_Count">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Property">
+        <PropertyRef Name="FloorCountId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Image_Property">
+    <End Type="PropetyAppModel.Property" Role="Property" Multiplicity="0..1" />
+    <End Type="PropetyAppModel.Image" Role="Image" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Property">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Image">
+        <PropertyRef Name="PropertyId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Indicators_Property_Indicators">
+    <End Type="PropetyAppModel.Indicator" Role="Indicator" Multiplicity="0..1" />
+    <End Type="PropetyAppModel.Indicators_Property" Role="Indicators_Property" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Indicator">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Indicators_Property">
+        <PropertyRef Name="IndicatorId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Indicators_Property_Property">
+    <End Type="PropetyAppModel.Property" Role="Property" Multiplicity="0..1" />
+    <End Type="PropetyAppModel.Indicators_Property" Role="Indicators_Property" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Property">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Indicators_Property">
+        <PropertyRef Name="PropertyId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Property_Metro">
+    <End Type="PropetyAppModel.Metro" Role="Metro" Multiplicity="0..1" />
+    <End Type="PropetyAppModel.Property" Role="Property" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Metro">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Property">
+        <PropertyRef Name="MetroId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Property_Owner_Type">
+    <End Type="PropetyAppModel.Owner_Type" Role="Owner_Type" Multiplicity="0..1" />
+    <End Type="PropetyAppModel.Property" Role="Property" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Owner_Type">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Property">
+        <PropertyRef Name="OwnerTypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Property_Propert_Type">
+    <End Type="PropetyAppModel.Propert_Type" Role="Propert_Type" Multiplicity="0..1" />
+    <End Type="PropetyAppModel.Property" Role="Property" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Propert_Type">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Property">
+        <PropertyRef Name="PropertyTypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Property_Regions">
+    <End Type="PropetyAppModel.Region" Role="Region" Multiplicity="0..1" />
+    <End Type="PropetyAppModel.Property" Role="Property" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Region">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Property">
+        <PropertyRef Name="RegionId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Property_RepairType">
+    <End Type="PropetyAppModel.Repair_Type" Role="Repair_Type" Multiplicity="0..1" />
+    <End Type="PropetyAppModel.Property" Role="Property" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Repair_Type">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Property">
+        <PropertyRef Name="RepairTypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Property_Room_Count">
+    <End Type="PropetyAppModel.Room_Count" Role="Room_Count" Multiplicity="0..1" />
+    <End Type="PropetyAppModel.Property" Role="Property" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Room_Count">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Property">
+        <PropertyRef Name="RoomCountId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Property_Sell_Type">
+    <End Type="PropetyAppModel.Sell_Type" Role="Sell_Type" Multiplicity="0..1" />
+    <End Type="PropetyAppModel.Property" Role="Property" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Sell_Type">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Property">
+        <PropertyRef Name="SellTypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Property_Settlement">
+    <End Type="PropetyAppModel.Settlement" Role="Settlement" Multiplicity="0..1" />
+    <End Type="PropetyAppModel.Property" Role="Property" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Settlement">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Property">
+        <PropertyRef Name="SettlementId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Property_Status">
+    <End Type="PropetyAppModel.Status" Role="Status" Multiplicity="0..1" />
+    <End Type="PropetyAppModel.Property" Role="Property" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Status">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Property">
+        <PropertyRef Name="StatusId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

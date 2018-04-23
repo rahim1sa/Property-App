@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="751764d1fc4d47c6b86646956a156221" Name="Diagram1" ZoomLevel="28">
+        <AssociationConnector Association="PropetyAppModel.FK_Regions_Regions" />
+        <EntityTypeShape EntityType="PropetyAppModel.Activity" Width="1.5" PointX="3" PointY="15.25" />
+        <EntityTypeShape EntityType="PropetyAppModel.Activity_Property" Width="1.5" PointX="5.25" PointY="5" />
+        <EntityTypeShape EntityType="PropetyAppModel.Advert_Type" Width="1.5" PointX="0.75" PointY="10.75" />
+        <EntityTypeShape EntityType="PropetyAppModel.City" Width="1.5" PointX="0.75" PointY="34.125" />
+        <EntityTypeShape EntityType="PropetyAppModel.Constructor_Project" Width="1.5" PointX="0.75" PointY="36.5" />
+        <EntityTypeShape EntityType="PropetyAppModel.Country" Width="1.5" PointX="0.75" PointY="13.125" />
+        <EntityTypeShape EntityType="PropetyAppModel.Document_Type" Width="1.5" PointX="0.75" PointY="15.375" />
+        <EntityTypeShape EntityType="PropetyAppModel.Floor_Count" Width="1.5" PointX="0.75" PointY="27.125" />
+        <EntityTypeShape EntityType="PropetyAppModel.Image" Width="1.5" PointX="5.25" PointY="7.875" />
+        <EntityTypeShape EntityType="PropetyAppModel.Indicator" Width="1.5" PointX="3" PointY="12.25" />
+        <EntityTypeShape EntityType="PropetyAppModel.Indicators_Property" Width="1.5" PointX="5.25" PointY="2" />
+        <EntityTypeShape EntityType="PropetyAppModel.Metro" Width="1.5" PointX="0.75" PointY="24.75" />
+        <EntityTypeShape EntityType="PropetyAppModel.Owner_Type" Width="1.5" PointX="0.75" PointY="8.375" />
+        <EntityTypeShape EntityType="PropetyAppModel.Propert_Type" Width="1.5" PointX="0.75" PointY="5.25" />
+        <EntityTypeShape EntityType="PropetyAppModel.Property" Width="1.5" PointX="3" PointY="1.25" />
+        <EntityTypeShape EntityType="PropetyAppModel.Region" Width="1.5" PointX="0.75" PointY="22.5" />
+        <EntityTypeShape EntityType="PropetyAppModel.Repair_Type" Width="1.5" PointX="0.75" PointY="29.5" />
+        <EntityTypeShape EntityType="PropetyAppModel.Room_Count" Width="1.5" PointX="0.75" PointY="38.875" />
+        <EntityTypeShape EntityType="PropetyAppModel.Sell_Type" Width="1.5" PointX="0.75" PointY="31.875" />
+        <EntityTypeShape EntityType="PropetyAppModel.Settlement" Width="1.5" PointX="0.75" PointY="20.125" />
+        <EntityTypeShape EntityType="PropetyAppModel.Status" Width="1.5" PointX="0.75" PointY="17.75" />
+        <EntityTypeShape EntityType="PropetyAppModel.sysdiagram" Width="1.5" PointX="7.75" PointY="0.75" />
+        <AssociationConnector Association="PropetyAppModel.FK_Activity_Property_Activity" />
+        <AssociationConnector Association="PropetyAppModel.FK_Activity_Property_Property" />
+        <AssociationConnector Association="PropetyAppModel.FK_Property_Advert_Type" />
+        <AssociationConnector Association="PropetyAppModel.FK_Property_Cities" />
+        <AssociationConnector Association="PropetyAppModel.FK_Property_Constructor_Project" />
+        <AssociationConnector Association="PropetyAppModel.FK_Property_Country" />
+        <AssociationConnector Association="PropetyAppModel.FK_Property_Document_Type" />
+        <AssociationConnector Association="PropetyAppModel.FK_Property_Floor_Count" />
+        <AssociationConnector Association="PropetyAppModel.FK_Image_Property" />
+        <AssociationConnector Association="PropetyAppModel.FK_Indicators_Property_Indicators" />
+        <AssociationConnector Association="PropetyAppModel.FK_Indicators_Property_Property" />
+        <AssociationConnector Association="PropetyAppModel.FK_Property_Metro" />
+        <AssociationConnector Association="PropetyAppModel.FK_Property_Owner_Type" />
+        <AssociationConnector Association="PropetyAppModel.FK_Property_Propert_Type" />
+        <AssociationConnector Association="PropetyAppModel.FK_Property_Regions" />
+        <AssociationConnector Association="PropetyAppModel.FK_Property_RepairType" />
+        <AssociationConnector Association="PropetyAppModel.FK_Property_Room_Count" />
+        <AssociationConnector Association="PropetyAppModel.FK_Property_Sell_Type" />
+        <AssociationConnector Association="PropetyAppModel.FK_Property_Settlement" />
+        <AssociationConnector Association="PropetyAppModel.FK_Property_Status" />
+        </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
